@@ -18,7 +18,7 @@ const client = new MongoClient(uri, { useUnifiedTopology: true });
 
 app.use(cors({
   origin: [
-      "https://obscure-inlet-54135.herokuapp.com/",
+      "https://obscure-inlet-54135.herokuapp.com",
       "http://localhost:5002"
   ],
   optionsSuccessStatus: 200
