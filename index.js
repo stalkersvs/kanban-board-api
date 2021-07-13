@@ -16,7 +16,13 @@ const client = new MongoClient(uri, { useUnifiedTopology: true });
  * Setting api cors
  */
 
-app.use(cors());
+app.use(cors({
+  origin: [
+      "https://obscure-inlet-54135.herokuapp.com/",
+      "http://localhost:5002"
+  ],
+  optionsSuccessStatus: 200
+}));
 app.options('*', cors());
 app.use(bodyParser.json());
 
