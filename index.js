@@ -4,6 +4,7 @@ const { MongoClient } = require('mongodb');
 const bodyParser = require('body-parser');
 const mock = false;
 const app = express();
+const port = 8080;
 const user = {
   userName: 'testUser',
   passWord: 'topkHdTcyaOBpm5R',
@@ -173,7 +174,9 @@ async function main() {
     await connect();
   }
 
-  app.listen(8080, () => {});
+  app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+  });
 }
 
 main();
